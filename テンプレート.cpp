@@ -32,7 +32,7 @@ template <class T> auto MIN(T& seq) { return *min_element(ALL(seq)); }
 template <class T> auto SUM(T& seq) {
     T temp{0};
     auto& temp2 = temp[0];
-    return accumulate(seq.begin(), seq.end(), temp2);
+    return accumulate(ALL(seq), temp2);
 }
 template <class T> void REV(vector<T>& seq) { reverse(ALL(seq)); }
 template <class T> void SORT(T& seq) { sort(ALL(seq)); }
